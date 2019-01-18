@@ -4,4 +4,9 @@ class TaskManagerApp < Sinatra::Base
   get '/' do
     erb :dashboard
   end
+
+  get '/tasks' do
+    @tasks = ["tasks1", "task2", "task3"]
+    erb :index
+  end
 end
