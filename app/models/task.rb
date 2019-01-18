@@ -36,4 +36,15 @@ class Task
     Task.new(task)
   end
 
+  def self.update(id, task_params)
+    database.execute("UPDATE tasks
+                      SET title = ?
+                      WHERE id = ?;",
+                      task_params[:title],
+                      task_params[:descriptions],
+                      id)
+
+    Task.find(id)
+  end
+
 end
