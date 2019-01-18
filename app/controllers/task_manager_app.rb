@@ -2,7 +2,7 @@ require_relative '../models/task.rb'
 
 class TaskManagerApp < Sinatra::Base
   set :root, File.expand_path("..", __dir__)
-  set :method_override, true # this allows  us to use _method in the form
+  set :method_override, true # this allows us to use _method in the form
 
   get '/' do
     erb :dashboard
