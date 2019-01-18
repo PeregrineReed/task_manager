@@ -38,7 +38,8 @@ class Task
 
   def self.update(id, task_params)
     database.execute("UPDATE tasks
-                      SET title = ?
+                      SET title = ?,
+                          description = ?
                       WHERE id = ?;",
                       task_params[:title],
                       task_params[:descriptions],
