@@ -42,7 +42,7 @@ class Task
                           description = ?
                       WHERE id = ?;",
                       task_params[:title],
-                      task_params[:descriptions],
+                      task_params[:description],
                       id)
 
     Task.find(id)
